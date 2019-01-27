@@ -19,8 +19,11 @@ public class GuessingGame {
                 System.out.println("Your guess is correct!");
                 break;
             }
-            else {
-                System.out.println("Incorrect, try again:");
+            else if (guess > randNum){
+                System.out.println("Incorrect, your guess is too high. Please try again: ");
+            }
+            else{
+                System.out.println("Incorrect, your guess is too low. Please try again: ");
             }
             
         }
