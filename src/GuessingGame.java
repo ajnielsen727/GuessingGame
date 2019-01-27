@@ -11,12 +11,13 @@ public class GuessingGame {
     public static void main(String[] args) {
         
         int randNum = (int) (Math.random() * 50 + 1);
+        int count = 1;
         
         System.out.println("Pick a number between 1-50.");
         while(true){
             int guess = new Scanner(System.in).nextInt();
             if (guess == randNum){
-                System.out.println("Your guess is correct!");
+                System.out.println("Your guess is correct! You got it in " + count + " tries.");
                 break;
             }
             else if (guess > randNum){
@@ -25,6 +26,7 @@ public class GuessingGame {
             else{
                 System.out.println("Incorrect, your guess is too low. Please try again: ");
             }
+            count++;
             
         }
         
